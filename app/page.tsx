@@ -1,0 +1,170 @@
+import Image from "next/image";
+import { Container } from "@/components/ui/Container";
+import { CTA } from "@/components/ui/CTA";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { BackgroundSection } from "@/components/ui/BackgroundSection";
+import { books } from "@/content/books";
+import { werte } from "@/content/values";
+import { getFeaturedPerson } from "@/content/people";
+import { veranstaltungen } from "@/content/events";
+import { site, backgrounds } from "@/content/site";
+import { formatEuro } from "@/lib/format";
+
+export default function HomePage() {
+  const book = books[0];
+  const mahinda = getFeaturedPerson();
+  const veranstaltung = veranstaltungen[0];
+
+  return (
+    <>
+      {/* Hero */}
+      <BackgroundSection
+        image={backgrounds.hero}
+        priority
+        overlayClassName="bg-gradient-to-r from-paper from-5% via-paper/90 via-55% to-paper/45 md:to-paper/25"
+      >
+        <Container className="py-24 md:py-32 lg:py-40">
+          <div className="max-w-2xl animate-fade-up [text-shadow:0_1px_10px_rgba(251,246,238,0.6)]">
+            <p className="font-display text-sm uppercase tracking-[0.25em] text-gold">
+              {site.tagline}
+            </p>
+            <h1 className="mt-5 text-4xl leading-[1.1] text-ink md:text-6xl">
+              {site.claim}
+            </h1>
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/85 md:max-w-xl">
+              Bücher, die nicht nur gelesen, sondern empfunden werden – liebevoll
+              illustriert und mit Sorgfalt gemacht.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <CTA href={`/buecher/${book.slug}`}>Zum Buch</CTA>
+              <CTA href="/verlag" variant="secondary">
+                Über den Verlag
+              </CTA>
+            </div>
+          </div>
+        </Container>
+      </BackgroundSection>
+
+      {/* Aktuelles Buch */}
+      <Container className="py-20 md:py-28">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div className="relative mx-auto aspect-[2/3] w-full max-w-sm overflow-hidden rounded-lg shadow-book">
+            <Image
+              src={book.cover}
+              alt={book.coverAlt}
+              fill
+              sizes="(min-width: 768px) 24rem, 80vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="font-display text-sm uppercase tracking-[0.2em] text-gold">
+              Unser aktuelles Buch
+            </p>
+            <h2 className="mt-3 text-3xl md:text-4xl">{book.titel}</h2>
+            {book.untertitel && (
+              <p className="mt-2 text-xl text-ink/70">{book.untertitel}</p>
+            )}
+            <p className="mt-5 text-lg leading-relaxed text-ink/80">
+              {book.kurzbeschreibung}
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-5">
+              <CTA href={`/buecher/${book.slug}`}>Mehr zum Buch</CTA>
+              {book.preis != null && (
+                <span className="text-ink/70">{formatEuro(book.preis)}</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </Container>
+
+      {/* Drei Werte */}
+      <BackgroundSection
+        image={backgrounds.werte}
+        overlayClassName="bg-paper-deep/92"
+      >
+        <Container className="py-20 md:py-28">
+          <SectionHeader
+            align="center"
+            eyebrow="Was uns wichtig ist"
+            title="Gefühl, Sinnlichkeit und Qualität"
+            intro="Drei Grundgedanken, die in jedem unserer Bücher stecken."
+          />
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            {werte.map((w) => (
+              <div
+                key={w.titel}
+                className="rounded-xl bg-paper/70 p-7 shadow-soft backdrop-blur-sm"
+              >
+                <h3 className="font-display text-2xl text-ink">{w.titel}</h3>
+                <p className="mt-3 leading-relaxed text-ink/75">{w.text}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </BackgroundSection>
+
+      {/* Verlag-Teaser */}
+      {mahinda && (
+        <Container className="py-20 md:py-28">
+          <div className="grid items-center gap-10 md:grid-cols-[1fr_16rem] md:gap-16">
+            <div className="order-2 md:order-1">
+              <SectionHeader
+                eyebrow="Der Verlag"
+                title="Ein kleiner Verlag mit einer klaren Haltung"
+                intro="Vedana ist ein Familienverlag. Wir machen Bücher, die berühren – mit Sorgfalt, Handschrift und einem hohen Qualitätsanspruch."
+              />
+              <div className="mt-7">
+                <CTA href="/verlag" variant="secondary">
+                  Mehr über uns
+                </CTA>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-lg shadow-book">
+                <Image
+                  src={mahinda.bild}
+                  alt={mahinda.bildAlt}
+                  fill
+                  sizes="(min-width: 768px) 16rem, 60vw"
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-3 text-center text-sm text-ink/60">
+                {mahinda.name} · {mahinda.rolle}
+              </p>
+            </div>
+          </div>
+        </Container>
+      )}
+
+      {/* Veranstaltungen-Teaser */}
+      {veranstaltung && (
+        <BackgroundSection
+          image={backgrounds.veranstaltung}
+          overlayClassName="bg-ink/55"
+        >
+          <Container className="py-24 md:py-28">
+            <div className="max-w-xl">
+              <p className="font-display text-sm uppercase tracking-[0.25em] text-gold-soft">
+                Veranstaltungen
+              </p>
+              <h2 className="mt-4 text-3xl text-paper md:text-4xl">
+                {veranstaltung.titel}
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-paper/85">
+                Worte und Musik, die einander tragen. Wir gestalten musikalische
+                Lesungen – für Veranstalter und besondere Anlässe.
+              </p>
+              <div className="mt-7">
+                <CTA href="/kontakt" variant="light">
+                  Anfragen
+                </CTA>
+              </div>
+            </div>
+          </Container>
+        </BackgroundSection>
+      )}
+    </>
+  );
+}

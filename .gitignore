@@ -1,0 +1,34 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# lokale Umgebungsvariablen (niemals committen)
+.env
+.env*.local
+
+# ---------------------------------------------------------------
+# Quell-Assets (Originale). Sie werden per `npm run prepare-images`
+# zu optimierten WebP-Dateien unter /public/images verarbeitet und
+# gehören NICHT in den Build/Deploy. Die Originale bleiben lokal liegen.
+# ---------------------------------------------------------------
+/*.png
+/*.jpg
+/*.jpeg
+/Stock Fotos/
+/*.docx
+/2026-07-04-website-strategie.md
