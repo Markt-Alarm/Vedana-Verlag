@@ -41,6 +41,13 @@ export const site = {
   },
   googleSiteVerification: "", // TODO PLATZHALTER: Search-Console-Meta-Token
 
+  // Sitz des Verlags – Startpunkt der Entfernungsberechnung (musikalische Lesungen).
+  standort: {
+    name: "Scheeßel",
+    lat: 53.1667,
+    lon: 9.4833,
+  },
+
   // „Bücher" ist bewusst NICHT in der Hauptnavigation (aktuell nur ein Buch).
   // Die Route /buecher bleibt bestehen und wird später wieder eingeblendet.
   nav: [
@@ -53,6 +60,7 @@ export const site = {
         { label: "Team", href: "/verlag/team" },
       ],
     },
+    { label: "Musikalische Lesungen", href: "/musikalische-lesungen" },
     { label: "Kontakt", href: "/kontakt" },
   ] as NavItem[],
 

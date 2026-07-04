@@ -75,6 +75,17 @@ export default function DatenschutzPage() {
         <Placeholder>[Zuständige Aufsichtsbehörde und Kontaktweg
         ergänzen.]</Placeholder>
       </p>
+
+      <h2>8. Karten &amp; Entfernungsberechnung (OpenStreetMap)</h2>
+      <p>
+        Auf der Seite „Musikalische Lesungen“ kann eine Karte geladen werden. Sie
+        wird erst nach einem Klick auf „Karte laden“ von OpenStreetMap abgerufen –
+        vorher werden keine Kartendaten geladen. Für die optionale
+        Entfernungsberechnung wird der eingegebene Ort über den Dienst Nominatim
+        (OpenStreetMap) abgefragt. Dabei wird Ihre IP-Adresse an die OpenStreetMap
+        Foundation übermittelt. <Placeholder>[Rechtsgrundlage (Art. 6 Abs. 1
+        lit. a/f DSGVO) und Link zur OSMF-Datenschutzerklärung ergänzen.]</Placeholder>
+      </p>
     </LegalPageLayout>
   );
 }

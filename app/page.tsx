@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { CTA } from "@/components/ui/CTA";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { BackgroundSection } from "@/components/ui/BackgroundSection";
+import { Reveal } from "@/components/ui/Reveal";
 import { books } from "@/content/books";
 import { werte } from "@/content/values";
 import { getFeaturedPerson } from "@/content/people";
@@ -23,12 +24,20 @@ export default function HomePage() {
         priority
         overlayClassName="bg-gradient-to-r from-paper from-5% via-paper/90 via-55% to-paper/45 md:to-paper/25"
       >
-        <Container className="py-24 md:py-32 lg:py-40">
-          <div className="max-w-2xl animate-fade-up [text-shadow:0_1px_10px_rgba(251,246,238,0.6)]">
+        <Container className="py-20 md:py-28 lg:py-36">
+          <div className="max-w-2xl animate-fade-up">
+            <Image
+              src="/images/brand/vedana-logo-v1.webp"
+              alt="Vedana Verlag"
+              width={240}
+              height={240}
+              priority
+              className="mb-8 h-20 w-auto md:h-28"
+            />
             <p className="font-display text-sm uppercase tracking-[0.25em] text-gold">
               {site.tagline}
             </p>
-            <h1 className="mt-5 text-4xl leading-[1.1] text-ink md:text-6xl">
+            <h1 className="mt-4 text-4xl leading-[1.1] text-ink [text-shadow:0_1px_12px_rgba(251,246,238,0.7)] md:text-6xl">
               {site.claim}
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/85 md:max-w-xl">
@@ -47,7 +56,7 @@ export default function HomePage() {
 
       {/* Aktuelles Buch */}
       <Container className="py-20 md:py-28">
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+        <Reveal className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div className="relative mx-auto aspect-[2/3] w-full max-w-sm overflow-hidden rounded-lg shadow-book">
             <Image
               src={book.cover}
@@ -75,39 +84,43 @@ export default function HomePage() {
               )}
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
 
-      {/* Drei Werte */}
-      <BackgroundSection
-        image={backgrounds.werte}
-        overlayClassName="bg-paper-deep/92"
-      >
+      {/* Drei Werte – ruhige, hochwertige Fläche */}
+      <section className="bg-paper-deep">
         <Container className="py-20 md:py-28">
-          <SectionHeader
-            align="center"
-            eyebrow="Was uns wichtig ist"
-            title="Gefühl, Sinnlichkeit und Qualität"
-            intro="Drei Grundgedanken, die in jedem unserer Bücher stecken."
-          />
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {werte.map((w) => (
-              <div
-                key={w.titel}
-                className="rounded-xl bg-paper/70 p-7 shadow-soft backdrop-blur-sm"
-              >
-                <h3 className="font-display text-2xl text-ink">{w.titel}</h3>
-                <p className="mt-3 leading-relaxed text-ink/75">{w.text}</p>
-              </div>
+          <Reveal>
+            <SectionHeader
+              align="center"
+              eyebrow="Was uns wichtig ist"
+              title="Gefühl, Sinnlichkeit und Qualität"
+              intro="Drei Grundgedanken, die in jedem unserer Bücher stecken."
+            />
+          </Reveal>
+          <div className="mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-3">
+            {werte.map((w, i) => (
+              <Reveal key={w.titel} delay={i * 120}>
+                <div className="h-full rounded-xl border border-ink/10 bg-paper p-7 shadow-soft transition-shadow duration-300 hover:shadow-book">
+                  <span
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/15 font-display text-lg text-gold"
+                    aria-hidden="true"
+                  >
+                    {i + 1}
+                  </span>
+                  <h3 className="mt-4 font-display text-2xl text-ink">{w.titel}</h3>
+                  <p className="mt-3 leading-relaxed text-ink/75">{w.text}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Container>
-      </BackgroundSection>
+      </section>
 
       {/* Verlag-Teaser */}
       {mahinda && (
         <Container className="py-20 md:py-28">
-          <div className="grid items-center gap-10 md:grid-cols-[1fr_16rem] md:gap-16">
+          <Reveal className="grid items-center gap-10 md:grid-cols-[1fr_16rem] md:gap-16">
             <div className="order-2 md:order-1">
               <SectionHeader
                 eyebrow="Der Verlag"
@@ -127,25 +140,25 @@ export default function HomePage() {
                   alt={mahinda.bildAlt}
                   fill
                   sizes="(min-width: 768px) 16rem, 60vw"
-                  className="object-cover"
+                  className="object-cover object-[center_28%]"
                 />
               </div>
               <p className="mt-3 text-center text-sm text-ink/60">
                 {mahinda.name} · {mahinda.rolle}
               </p>
             </div>
-          </div>
+          </Reveal>
         </Container>
       )}
 
-      {/* Veranstaltungen-Teaser */}
+      {/* Musikalische Lesungen – Teaser */}
       {veranstaltung && (
         <BackgroundSection
           image={backgrounds.veranstaltung}
           overlayClassName="bg-ink/55"
         >
           <Container className="py-24 md:py-28">
-            <div className="max-w-xl">
+            <Reveal className="max-w-xl">
               <p className="font-display text-sm uppercase tracking-[0.25em] text-gold-soft">
                 Veranstaltungen
               </p>
@@ -157,11 +170,11 @@ export default function HomePage() {
                 Lesungen – für Veranstalter und besondere Anlässe.
               </p>
               <div className="mt-7">
-                <CTA href="/kontakt" variant="light">
-                  Anfragen
+                <CTA href="/musikalische-lesungen" variant="light">
+                  Mehr erfahren &amp; anfragen
                 </CTA>
               </div>
-            </div>
+            </Reveal>
           </Container>
         </BackgroundSection>
       )}

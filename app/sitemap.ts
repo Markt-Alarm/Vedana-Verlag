@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/verlag",
     "/verlag/team",
+    "/musikalische-lesungen",
     "/kontakt",
     "/impressum",
     "/datenschutz",
