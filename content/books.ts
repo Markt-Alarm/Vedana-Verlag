@@ -33,6 +33,7 @@ export interface Book {
   erscheinungsjahr?: number;
   seiten?: number;
   format?: string;
+  leseprobe?: string; // URL zur Leseprobe (z. B. PDF); leer = Platzhalter-Button
   lieferzeit?: string;
   kaufoptionen: Kaufoption[];
   status: BookStatus;
@@ -60,6 +61,7 @@ export const books: Book[] = [
     erscheinungsjahr: undefined, // TODO PLATZHALTER
     seiten: undefined, // TODO PLATZHALTER
     format: undefined, // TODO PLATZHALTER: z. B. „Hardcover, durchgehend farbig illustriert“
+    leseprobe: undefined, // TODO PLATZHALTER: Link zur Leseprobe (PDF-URL) eintragen
     lieferzeit: "2–4 Werktage innerhalb Deutschlands",
     kaufoptionen: [
       // TODO PLATZHALTER: echten Stripe Payment Link eintragen.

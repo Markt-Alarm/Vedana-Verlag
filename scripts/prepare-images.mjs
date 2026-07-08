@@ -20,7 +20,7 @@ const root = process.cwd();
 /** @type {{src: string, dest: string, w: number}[]} */
 const jobs = [
   // Marke (Logo mit Transparenz)
-  { src: "logov1.png", dest: "public/images/brand/vedana-logo-v1.webp", w: 600 },
+  { src: "logo transp.png", dest: "public/images/brand/vedana-logo-v1.webp", w: 600 },
 
   // Buchcover
   {
@@ -30,7 +30,7 @@ const jobs = [
   },
 
   // Team-Porträts
-  { src: "Autor.png", dest: "public/images/team/mahinda-ansari-v1.webp", w: 800 },
+  { src: "Mahinda.png", dest: "public/images/team/mahinda-ansari-v1.webp", w: 800 },
   { src: "Arthur Ansari.png", dest: "public/images/team/arthur-ansari-v1.webp", w: 800 },
   { src: "peter ansari.png", dest: "public/images/team/peter-ansari-v1.webp", w: 800 },
   { src: "anna ansari.png", dest: "public/images/team/anna-ansari-v1.webp", w: 800 },
@@ -43,7 +43,7 @@ const jobs = [
   { src: "Stock Fotos/pexels-pixabay-159866.jpg", dest: "public/images/backgrounds/hero-v1.webp", w: 2000 },
   { src: "Stock Fotos/pexels-sunsetoned-5913138.jpg", dest: "public/images/backgrounds/werte-v1.webp", w: 2000 },
   { src: "Stock Fotos/pexels-lilartsy-1793042.jpg", dest: "public/images/backgrounds/verlag-v1.webp", w: 2000 },
-  { src: "Stock Fotos/Buch-blume-violine.jpg", dest: "public/images/backgrounds/veranstaltung-v1.webp", w: 2000 },
+  { src: "Stock Fotos/Bild musikalische Lesung.jpg", dest: "public/images/backgrounds/veranstaltung-v1.webp", w: 2000 },
   { src: "Stock Fotos/pexels-sunsetoned-5913138.jpg", dest: "public/images/backgrounds/kontakt-v1.webp", w: 2000 },
   { src: "Stock Fotos/Impressum_pexels-ravikant-2877338.jpg", dest: "public/images/backgrounds/legal-v1.webp", w: 2000 },
 ];

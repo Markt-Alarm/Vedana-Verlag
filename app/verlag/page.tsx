@@ -1,7 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { FeaturedPerson } from "@/components/person/FeaturedPerson";
 import { getFeaturedPerson } from "@/content/people";
 import { werte } from "@/content/values";
@@ -10,7 +9,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Verlag",
   description:
-    "Vedana bedeutet Gefühl. Über den Vedana Verlag – Haltung, Anspruch und die Menschen dahinter.",
+    "Bücher mit Herz. Über den Vedana Verlag – Haltung, Anspruch und die Menschen dahinter.",
   path: "/verlag",
 });
 
@@ -25,7 +24,7 @@ export default function VerlagPage() {
           <p className="font-display text-sm uppercase tracking-[0.2em] text-gold">
             Der Verlag
           </p>
-          <h1 className="mt-3 text-4xl md:text-5xl">Vedana bedeutet Gefühl</h1>
+          <h1 className="mt-3 text-4xl md:text-5xl">Bücher mit Herz</h1>
           <div className="prose-vedana mt-8">
             <p>
               Vedana ist ein Wort aus dem Pali und bedeutet Gefühl, Empfindung –
@@ -38,19 +37,6 @@ export default function VerlagPage() {
               Qualitätsanspruch – vom Text über die Illustration bis zum Druck.
             </p>
           </div>
-        </div>
-      </Container>
-
-      {/* Gründungsgeschichte */}
-      <Container className="pb-16 md:pb-24">
-        <div className="max-w-prose rounded-xl bg-paper-deep p-8">
-          <h2 className="font-display text-2xl">Wie alles begann</h2>
-          <p className="mt-4">
-            <Placeholder>
-              [PLATZHALTER: persönliche Gründungsgeschichte (Geburts-Metapher)
-              aus „Texte für die Verlags.docx“ einsetzen – sprachlich geglättet.]
-            </Placeholder>
-          </p>
         </div>
       </Container>
 

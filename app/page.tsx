@@ -29,8 +29,8 @@ export default function HomePage() {
             <Image
               src="/images/brand/vedana-logo-v1.webp"
               alt="Vedana Verlag"
-              width={240}
-              height={240}
+              width={402}
+              height={253}
               priority
               className="mb-8 h-20 w-auto md:h-28"
             />

@@ -61,6 +61,7 @@ export const site = {
       ],
     },
     { label: "Musikalische Lesungen", href: "/musikalische-lesungen" },
+    { label: "Shop", href: "/buecher/der-buddha-war-wie-du" },
     { label: "Kontakt", href: "/kontakt" },
   ] as NavItem[],
 

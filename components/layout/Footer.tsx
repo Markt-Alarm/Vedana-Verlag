@@ -13,8 +13,8 @@ export function Footer() {
             <Image
               src="/images/brand/vedana-logo-v1.webp"
               alt="Vedana Verlag"
-              width={160}
-              height={160}
+              width={402}
+              height={253}
               className="h-20 w-auto"
             />
             <p className="mt-4 max-w-xs font-display text-lg italic text-ink/70">

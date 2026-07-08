@@ -84,6 +84,25 @@ export function BookDetail({ book }: { book: Book }) {
 
             <RichText text={book.beschreibung} className="mt-8" />
 
+            {/* Leseprobe */}
+            <div className="mt-8">
+              {book.leseprobe ? (
+                <a
+                  href={book.leseprobe}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-2.5 text-sm font-medium text-ink transition-colors hover:border-gold hover:text-gold"
+                >
+                  Leseprobe lesen
+                </a>
+              ) : (
+                <Placeholder>
+                  [PLATZHALTER: Leseprobe-Link im Feld „leseprobe“ in
+                  content/books.ts eintragen.]
+                </Placeholder>
+              )}
+            </div>
+
             {book.zielgruppe && (
               <div className="mt-8 rounded-lg bg-paper-deep p-6">
                 <h2 className="font-display text-lg">Für wen ist dieses Buch?</h2>
