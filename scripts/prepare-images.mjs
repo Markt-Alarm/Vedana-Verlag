@@ -24,8 +24,8 @@ const jobs = [
 
   // Buchcover
   {
-    src: "Cover_digitalisiert-2.png",
-    dest: "public/images/buecher/der-buddha-war-wie-du-cover-v1.webp",
+    src: "Cover_digitalisiert_neu.png",
+    dest: "public/images/buecher/der-buddha-war-wie-du-cover-v2.webp",
     w: 1000,
   },
 

@@ -25,6 +25,12 @@ export const people: Person[] = [
     featured: true,
   },
   {
+    name: "Dr. Peter Ansari",
+    rolle: "Texte und Layout",
+    bild: "/images/team/peter-ansari-v1.webp",
+    bildAlt: "Porträt von Dr. Peter Ansari, Texte und Layout.",
+  },
+  {
     name: "Arthur Ansari",
     rolle: "Illustration & künstlerische Leitung",
     bild: "/images/team/arthur-ansari-v1.webp",
@@ -53,12 +59,6 @@ export const people: Person[] = [
     rolle: "Lektorat · Germanist und Lehrer",
     bild: "/images/team/jan-ansari-v1.webp",
     bildAlt: "Porträt von Jan Ansari, Lektorat.",
-  },
-  {
-    name: "Dr. Peter Ansari",
-    rolle: "Texte und Layout",
-    bild: "/images/team/peter-ansari-v1.webp",
-    bildAlt: "Porträt von Dr. Peter Ansari, Texte und Layout.",
   },
   {
     name: "Anna Ansari",
