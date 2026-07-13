@@ -22,9 +22,10 @@ export default function LesungenPage() {
         </p>
         <h1 className="mt-3 text-4xl md:text-5xl">Musikalische Lesungen</h1>
         <p className="mt-6 text-lg leading-relaxed text-ink/80">
-          Worte und Musik, die einander tragen: Der Vedana Verlag gestaltet
-          musikalische Lesungen – literarische Texte, behutsam begleitet von
-          Musik. Für Buchhandlungen, Kulturveranstaltungen und besondere Anlässe.
+          Mit unseren Büchern möchten wir Menschen berühren – und genau das
+          möchten wir auch bei unseren Lesungen. Worte, Musik und Gesang
+          verschmelzen zu einem stimmungsvollen Erlebnis, das Herz und Seele
+          anspricht.
         </p>
       </div>
 
@@ -32,8 +33,15 @@ export default function LesungenPage() {
         <Reveal>
           <h2 className="font-display text-2xl md:text-3xl">Anfrage stellen</h2>
           <p className="mt-3 text-ink/70">
-            Erzählen Sie uns von Ihrer Veranstaltung – wir melden uns persönlich
-            bei Ihnen.
+            Gerne können Sie eine musikalische Lesung für Ihre Veranstaltung
+            buchen. Wir freuen uns auf Ihren Anruf unter{" "}
+            <a
+              href={`tel:${site.contact.telefonHref}`}
+              className="font-medium text-ink underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+            >
+              {site.contact.telefon}
+            </a>
+            .
           </p>
           <div className="mt-8">
             <LesungenForm />

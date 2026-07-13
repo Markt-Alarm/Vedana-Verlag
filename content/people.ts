@@ -17,36 +17,12 @@ export interface Person {
 export const people: Person[] = [
   {
     name: "Mahinda Ansari",
-    rolle: "Verlegerin & Autorin",
-    beschreibung:
-      "[PLATZHALTER: kurzer persönlicher Satz zu Mahinda – Gründung, Haltung, Anliegen.]",
+    rolle: "Verlegerin, Autorin & Heilpraktikerin",
+    beschreibung: "„Ein Buch zu schreiben fühlt sich an wie Kinderkriegen.“",
     bild: "/images/team/mahinda-ansari-v1.webp",
-    bildAlt: "Porträt von Mahinda Ansari, Verlegerin und Autorin des Vedana Verlags.",
+    bildAlt:
+      "Porträt von Mahinda Ansari, Verlegerin, Autorin und Heilpraktikerin des Vedana Verlags.",
     featured: true,
-  },
-  {
-    name: "Dr. Peter Ansari",
-    rolle: "Text & Buchgestaltung",
-    bild: "/images/team/peter-ansari-v1.webp",
-    bildAlt: "Porträt von Dr. Peter Ansari, Text und Buchgestaltung.",
-  },
-  {
-    name: "Anna Ansari",
-    rolle: "Lektorat · promovierte Germanistin",
-    bild: "/images/team/anna-ansari-v1.webp",
-    bildAlt: "Porträt von Anna Ansari, Lektorat.",
-  },
-  {
-    name: "Aaron Ansari",
-    rolle: "Fotografie, Gestaltung & Kalkulation",
-    bild: "/images/team/aaron-ansari-v1.webp",
-    bildAlt: "Porträt von Aaron Ansari, Fotografie, Gestaltung und Kalkulation.",
-  },
-  {
-    name: "Amber Ansari",
-    rolle: "Stoffentwicklung",
-    bild: "/images/team/amber-ansari-v1.webp",
-    bildAlt: "Porträt von Amber Ansari, Stoffentwicklung.",
   },
   {
     name: "Arthur Ansari",
@@ -55,16 +31,40 @@ export const people: Person[] = [
     bildAlt: "Porträt von Arthur Ansari, Illustration und künstlerische Leitung.",
   },
   {
+    name: "Aaron Ansari",
+    rolle: "Fotografie, Webdesign & Kalkulation",
+    bild: "/images/team/aaron-ansari-v1.webp",
+    bildAlt: "Porträt von Aaron Ansari, Fotografie, Webdesign und Kalkulation.",
+  },
+  {
+    name: "Amber Ansari",
+    rolle: "Stoffentwicklung",
+    bild: "/images/team/amber-ansari-v1.webp",
+    bildAlt: "Porträt von Amber Ansari, Stoffentwicklung.",
+  },
+  {
     name: "Elisa Anton",
-    rolle: "Lektorat & Korrektorat",
+    rolle: "Covergestaltung und Illustration",
     bild: "/images/team/elisa-anton-v1.webp",
-    bildAlt: "Porträt von Elisa Anton, Lektorat und Korrektorat.",
+    bildAlt: "Porträt von Elisa Anton, Covergestaltung und Illustration.",
   },
   {
     name: "Jan Ansari",
     rolle: "Lektorat · Germanist und Lehrer",
     bild: "/images/team/jan-ansari-v1.webp",
     bildAlt: "Porträt von Jan Ansari, Lektorat.",
+  },
+  {
+    name: "Dr. Peter Ansari",
+    rolle: "Texte und Layout",
+    bild: "/images/team/peter-ansari-v1.webp",
+    bildAlt: "Porträt von Dr. Peter Ansari, Texte und Layout.",
+  },
+  {
+    name: "Anna Ansari",
+    rolle: "Lektorat · promovierte Germanistin",
+    bild: "/images/team/anna-ansari-v1.webp",
+    bildAlt: "Porträt von Anna Ansari, Lektorat.",
   },
 ];
 

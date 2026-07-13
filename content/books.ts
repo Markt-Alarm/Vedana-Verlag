@@ -46,13 +46,11 @@ export const books: Book[] = [
     untertitel: "Die buddhistische Welt in Geschichten",
     autor: "Mahinda Ansari",
     kurzbeschreibung:
-      "Die buddhistische Welt, erzählt in Geschichten – liebevoll illustriert und mit Gefühl geschrieben.",
+      "Eine inspirierende Einführung in die zeitlose Weisheit des Buddha.",
     beschreibung:
-      "„Der Buddha war wie Du“ erzählt die buddhistische Welt in Geschichten. " +
-      "[PLATZHALTER: Bitte hier den finalen Klappen- bzw. Rückseitentext einsetzen. " +
-      "Dieser Absatz bleibt bewusst neutral und erfindet keine Inhalte.]",
+      "Dieses Buch entführt Dich auf eine sinnliche Reise in die buddhistische Welt. In zwölf längeren und kürzeren Geschichten erfährst Du, welche Einsichten und Methoden uns der Buddha für unser Leben mitgegeben hat. Eingebettet sind die Geschichten in eine zauberhafte Rahmenhandlung. Ein Junge, seine Schwester und ihr Vater begleiten uns durch die zwölf Monate eines Jahres. Monat für Monat öffnen sich Türen zu den großen Fragen des Lebens: Wie finden wir Gelassenheit? Warum leiden wir? Was bedeutet Karma? Und wie können wir zu Ruhe kommen? In poetischen Geschichten, verständlichen Erläuterungen und praktischen Übungen werden die Lehren des Buddha lebendig und unmittelbar erfahrbar.\n\nIn einer lauten Welt voller Ablenkungen lädt dieses herzerwärmende Buch zum Innehalten ein. Mit inspirierenden Texten und berührenden Illustrationen schenkt es Momente der Ruhe und Einsicht.\n\nFür alle, die sich einen lebendigen Zugang zur Lehre des Buddha wünschen.",
     zielgruppe:
-      "[PLATZHALTER: z. B. „Für alle, die dem Buddhismus über Geschichten begegnen möchten.“]",
+      "Das Buch richtet sich an Leserinnen und Leser, die sich für Achtsamkeit, Spiritualität und persönliche Entwicklung interessieren. Es ist geeignet für Menschen, die bereits mit der buddhistischen Lehre in Berührung gekommen sind und auch für Menschen ohne Vorkenntnisse.",
     cover: "/images/buecher/der-buddha-war-wie-du-cover-v1.webp",
     coverAlt:
       "Buchcover „Der Buddha war wie Du“ – Aquarell mit Weltkugel, Vögeln und einer meditierenden Figur am Wasser.",
@@ -61,7 +59,7 @@ export const books: Book[] = [
     erscheinungsjahr: undefined, // TODO PLATZHALTER
     seiten: undefined, // TODO PLATZHALTER
     format: undefined, // TODO PLATZHALTER: z. B. „Hardcover, durchgehend farbig illustriert“
-    leseprobe: undefined, // TODO PLATZHALTER: Link zur Leseprobe (PDF-URL) eintragen
+    leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe.pdf",
     lieferzeit: "2–4 Werktage innerhalb Deutschlands",
     kaufoptionen: [
       // TODO PLATZHALTER: echten Stripe Payment Link eintragen.

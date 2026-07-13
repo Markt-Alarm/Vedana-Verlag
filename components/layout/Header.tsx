@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
 import { MobileNav } from "./MobileNav";
 
@@ -23,10 +24,17 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-display text-xl font-semibold tracking-tight text-ink"
+          className="flex items-center"
           aria-label="Vedana Verlag – zur Startseite"
         >
-          Vedana <span className="font-normal text-ink/55">Verlag</span>
+          <Image
+            src="/images/brand/vedana-logo-v1.webp"
+            alt="Vedana Verlag"
+            width={402}
+            height={253}
+            priority
+            className="h-10 w-auto sm:h-11"
+          />
         </Link>
 
         <nav

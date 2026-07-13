@@ -94,21 +94,15 @@ export default function HomePage() {
             <SectionHeader
               align="center"
               eyebrow="Was uns wichtig ist"
-              title="Gefühl, Sinnlichkeit und Qualität"
-              intro="Drei Grundgedanken, die in jedem unserer Bücher stecken."
+              title="Gefühl, Sinnlichkeit, Qualität"
+              intro="Wir glauben an die Kraft liebevoll gewachsener Bücher."
             />
           </Reveal>
           <div className="mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-3">
             {werte.map((w, i) => (
               <Reveal key={w.titel} delay={i * 120}>
                 <div className="h-full rounded-xl border border-ink/10 bg-paper p-7 shadow-soft transition-shadow duration-300 hover:shadow-book">
-                  <span
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/15 font-display text-lg text-gold"
-                    aria-hidden="true"
-                  >
-                    {i + 1}
-                  </span>
-                  <h3 className="mt-4 font-display text-2xl text-ink">{w.titel}</h3>
+                  <h3 className="font-display text-2xl text-ink">{w.titel}</h3>
                   <p className="mt-3 leading-relaxed text-ink/75">{w.text}</p>
                 </div>
               </Reveal>
@@ -124,8 +118,8 @@ export default function HomePage() {
             <div className="order-2 md:order-1">
               <SectionHeader
                 eyebrow="Der Verlag"
-                title="Ein kleiner Verlag mit einer klaren Haltung"
-                intro="Vedana ist ein Familienverlag. Wir machen Bücher, die berühren – mit Sorgfalt, Handschrift und einem hohen Qualitätsanspruch."
+                title="Ein Buch zu schreiben fühlt sich an wie Kinderkriegen."
+                intro="Von der ersten Idee bis zu den druckvollen Presswehen – und warum wir daraus einen Verlag gemacht haben."
               />
               <div className="mt-7">
                 <CTA href="/verlag" variant="secondary">

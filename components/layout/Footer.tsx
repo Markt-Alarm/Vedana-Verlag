@@ -18,7 +18,7 @@ export function Footer() {
               className="h-20 w-auto"
             />
             <p className="mt-4 max-w-xs font-display text-lg italic text-ink/70">
-              {site.claim}
+              Bücher mit Herz
             </p>
           </div>
 

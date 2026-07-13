@@ -24,7 +24,7 @@ const jobs = [
 
   // Buchcover
   {
-    src: "Der Buddha in Geschichten.png",
+    src: "Cover_digitalisiert-2.png",
     dest: "public/images/buecher/der-buddha-war-wie-du-cover-v1.webp",
     w: 1000,
   },

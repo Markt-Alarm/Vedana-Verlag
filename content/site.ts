@@ -14,15 +14,14 @@ export const site = {
   // Für SEO/Metadaten. Beim Deploy auf die echte Domain setzen.
   url: "https://www.vedana-verlag.de",
   tagline: "Bücher für das Herz",
-  claim: "Vedana – das Gefühl, bevor wir denken.",
+  claim: "Lassen Sie sich berühren.",
   description:
     "Der Vedana Verlag macht Bücher, die nicht nur gelesen, sondern empfunden werden – liebevoll illustriert, sorgfältig gedruckt, mit Gefühl, Sinnlichkeit und Qualität.",
 
   contact: {
     telefon: "04263 / 675 66 70",
     telefonHref: "+4942636756670", // TODO PRÜFEN: internationale Schreibweise verifizieren
-    // TODO PLATZHALTER: echte Verlags-E-Mail (für Kontakt UND Bestellung auf Rechnung)
-    email: "PLATZHALTER@vedana-verlag.de",
+    email: "info@vedana-verlag.de",
   },
 
   // Zentrale Shop-Einstellungen
