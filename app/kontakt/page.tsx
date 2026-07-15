@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ContactBlock } from "@/components/ui/ContactBlock";
+import { ContactForm } from "@/components/ui/ContactForm";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -24,19 +25,27 @@ export default function KontaktPage() {
           <p className="mt-8 text-sm text-ink/55">
             {site.shop.versandRaum}. {site.shop.versandHinweis}.
           </p>
+          <div className="mt-8 rounded-xl bg-paper-deep p-6">
+            <h2 className="font-display text-lg">Bestellung auf Rechnung</h2>
+            <p className="mt-2 text-sm text-ink/70">
+              Sie möchten auf Rechnung bestellen? Wählen Sie im Formular
+              „Bestellung“ und nennen Sie uns das gewünschte Buch, die
+              Stückzahl und Ihre Lieferadresse – wir melden uns umgehend. Die
+              Zahlung online läuft sicher über Stripe; alternativ liefern wir
+              innerhalb Deutschlands auf Rechnung.
+            </p>
+          </div>
         </div>
 
-        <div className="rounded-xl bg-paper-deep p-8">
-          <h2 className="font-display text-xl">Bestellung auf Rechnung</h2>
-          <p className="mt-3 text-ink/75">
-            Sie möchten auf Rechnung bestellen? Schreiben Sie uns eine E-Mail mit
-            dem gewünschten Buch, der Stückzahl und Ihrer Lieferadresse – wir
-            melden uns umgehend.
+        <div className="rounded-xl border border-ink/10 bg-paper p-8 shadow-soft">
+          <h2 className="font-display text-xl">Nachricht schreiben</h2>
+          <p className="mt-2 text-ink/70">
+            Füllen Sie das Formular aus – wir melden uns so schnell wie
+            möglich bei Ihnen zurück.
           </p>
-          <p className="mt-4 text-sm text-ink/55">
-            Die Zahlung online läuft sicher über Stripe; alternativ liefern wir
-            innerhalb Deutschlands auf Rechnung.
-          </p>
+          <div className="mt-6">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </Container>

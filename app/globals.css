@@ -18,6 +18,15 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Fließtext im Blocksatz – ruhiger, buchähnlicher Lesefluss.
+     Überschriften, Buttons, Badges und Navigation bleiben bewusst
+     unangetastet (kein <p>), damit kurze Textelemente nicht verzerrt werden. */
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
   h1,
   h2,
   h3,
