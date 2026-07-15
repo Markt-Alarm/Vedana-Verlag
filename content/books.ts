@@ -59,7 +59,7 @@ export const books: Book[] = [
     erscheinungsjahr: undefined, // TODO PLATZHALTER
     seiten: undefined, // TODO PLATZHALTER
     format: undefined, // TODO PLATZHALTER: z. B. „Hardcover, durchgehend farbig illustriert“
-    leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe.pdf",
+    leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v2.pdf",
     lieferzeit: "2–4 Werktage innerhalb Deutschlands",
     kaufoptionen: [
       // TODO PLATZHALTER: echten Stripe Payment Link eintragen.
