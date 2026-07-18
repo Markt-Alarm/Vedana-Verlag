@@ -17,11 +17,11 @@ export interface Person {
 export const people: Person[] = [
   {
     name: "Mahinda Ansari",
-    rolle: "Verlegerin, Autorin & Heilpraktikerin",
+    rolle: "Autorin & Heilpraktikerin",
     beschreibung: "„Ein Buch zu schreiben fühlt sich an wie Kinderkriegen.“",
     bild: "/images/team/mahinda-ansari-v1.webp",
     bildAlt:
-      "Porträt von Mahinda Ansari, Verlegerin, Autorin und Heilpraktikerin des Vedana Verlags.",
+      "Porträt von Mahinda Ansari, Autorin und Heilpraktikerin des Vedana Verlags.",
     featured: true,
   },
   {
@@ -32,9 +32,9 @@ export const people: Person[] = [
   },
   {
     name: "Arthur Ansari",
-    rolle: "Illustration",
+    rolle: "Illustration & künstlerische Leitung",
     bild: "/images/team/arthur-ansari-v1.webp",
-    bildAlt: "Porträt von Arthur Ansari, Illustration.",
+    bildAlt: "Porträt von Arthur Ansari, Illustration und künstlerische Leitung.",
   },
   {
     name: "Aaron Ansari",
@@ -50,9 +50,9 @@ export const people: Person[] = [
   },
   {
     name: "Elisa Anton",
-    rolle: "Covergestaltung & künstlerische Leitung",
-    bild: "/images/team/elisa-anton-v2.webp",
-    bildAlt: "Porträt von Elisa Anton, Covergestaltung und künstlerische Leitung.",
+    rolle: "Covergestaltung & Illustration",
+    bild: "/images/team/elisa-anton-v1.webp",
+    bildAlt: "Porträt von Elisa Anton, Covergestaltung und Illustration.",
   },
   {
     name: "Jan Ansari",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { CTA } from "@/components/ui/CTA";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -26,14 +27,20 @@ export default function HomePage() {
       >
         <Container className="py-20 md:py-28 lg:py-36">
           <div className="max-w-2xl animate-fade-up">
-            <Image
-              src="/images/brand/vedana-logo-v1.webp"
-              alt="Vedana Verlag"
-              width={402}
-              height={253}
-              priority
-              className="mb-8 h-20 w-auto md:h-28"
-            />
+            <Link
+              href={`/buecher/${book.slug}`}
+              className="inline-block"
+              aria-label="Zum Shop – Der Buddha war wie Du"
+            >
+              <Image
+                src="/images/brand/vedana-logo-v1.webp"
+                alt="Vedana Verlag"
+                width={402}
+                height={253}
+                priority
+                className="mb-8 h-20 w-auto md:h-28"
+              />
+            </Link>
             <p className="font-display text-sm uppercase tracking-[0.25em] text-gold">
               {site.tagline}
             </p>

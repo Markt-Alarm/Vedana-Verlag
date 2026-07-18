@@ -21,7 +21,16 @@ export const site = {
   contact: {
     telefon: "04263 / 675 66 70",
     telefonHref: "+4942636756670", // TODO PRÜFEN: internationale Schreibweise verifizieren
+    telefax: "04263 / 675 66 70",
     email: "info@vedana-verlag.de",
+  },
+
+  // Ladungsfähige Anschrift des Verlags (Impressum, Datenschutz).
+  address: {
+    inhaberin: "Mahinda Ansari",
+    strasse: "Vor den Bruchhöfen 24",
+    plz: "27383",
+    ort: "Scheeßel",
   },
 
   // Zentrale Shop-Einstellungen

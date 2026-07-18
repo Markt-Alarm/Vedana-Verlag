@@ -1,5 +1,4 @@
 import { LegalPageLayout } from "@/components/ui/LegalPageLayout";
-import { DraftNote } from "@/components/ui/DraftNote";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -13,24 +12,35 @@ export const metadata = pageMetadata({
 export default function ImpressumPage() {
   return (
     <LegalPageLayout title="Impressum">
-      <DraftNote />
-
-      <h2>Angaben gemäß § 5 DDG</h2>
+      <h2>Anbieter</h2>
       <p>
-        Vedana Verlag
+        {site.name}
         <br />
-        <Placeholder>[Inhaberin, z. B. Mahinda Ansari]</Placeholder>
+        {site.address.strasse}
         <br />
-        <Placeholder>[Straße und Hausnummer]</Placeholder>
-        <br />
-        <Placeholder>[PLZ und Ort]</Placeholder>
+        {site.address.plz} {site.address.ort}
       </p>
 
       <h2>Kontakt</h2>
       <p>
         Telefon: {site.contact.telefon}
         <br />
-        E-Mail: <Placeholder>{site.contact.email}</Placeholder>
+        Telefax: {site.contact.telefax}
+        <br />
+        E-Mail: {site.contact.email}
+      </p>
+
+      <h2>Vertretungsberechtigte</h2>
+      <p>{site.address.inhaberin}</p>
+
+      <h2>Register &amp; Sitz</h2>
+      <p>
+        Registergericht:{" "}
+        <Placeholder>
+          [Name des Registergerichts, z. B. Amtsgericht Musterstadt]
+        </Placeholder>
+        <br />
+        Registernummer: <Placeholder>[HRB-Nummer]</Placeholder>
       </p>
 
       <h2>Umsatzsteuer</h2>
@@ -42,15 +52,31 @@ export default function ImpressumPage() {
 
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>
-        <Placeholder>[Name und Anschrift der verantwortlichen Person]</Placeholder>
+        {site.address.inhaberin}
+        <br />
+        {site.address.strasse}
+        <br />
+        {site.address.plz} {site.address.ort}
       </p>
 
-      <h2>Verbraucherstreitbeilegung</h2>
+      <h2>EU-Streitschlichtung</h2>
       <p>
-        <Placeholder>
-          [Angaben zur Verbraucherstreitbeilegung nach aktueller Rechtslage
-          ergänzen bzw. anwaltlich prüfen lassen.]
-        </Placeholder>
+        Die Europäische Kommission stellt eine Plattform zur
+        Online-Streitbeilegung (OS) bereit:{" "}
+        <a
+          href="https://ec.europa.eu/consumers/odr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://ec.europa.eu/consumers/odr/
+        </a>
+        . Unsere E-Mail-Adresse finden Sie oben im Impressum.
+      </p>
+
+      <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+        vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </LegalPageLayout>
   );
