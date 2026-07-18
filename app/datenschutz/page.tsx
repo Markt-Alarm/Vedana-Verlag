@@ -31,7 +31,7 @@ export default function DatenschutzPage() {
         <br />
         Die Datenverarbeitung auf dieser Website erfolgt durch den
         Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt
-        „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung
+        „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung
         entnehmen.
       </p>
       <p>
@@ -342,8 +342,8 @@ export default function DatenschutzPage() {
         Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen
         oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-
         bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen
-        Sie daran, dass die Adresszeile des Browsers von „http://" auf
-        „https://" wechselt und an dem Schloss-Symbol in Ihrer
+        Sie daran, dass die Adresszeile des Browsers von „http://“ auf
+        „https://“ wechselt und an dem Schloss-Symbol in Ihrer
         Browserzeile.
       </p>
       <p>
@@ -356,7 +356,7 @@ export default function DatenschutzPage() {
 
       <h3>Cookies</h3>
       <p>
-        Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind
+        Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind
         kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden
         an. Sie werden entweder vorübergehend für die Dauer einer Sitzung
         (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem
@@ -484,7 +484,7 @@ export default function DatenschutzPage() {
 
       <h3>Zahlungsabwicklung (Stripe)</h3>
       <p>
-        Für den Kauf über die Schaltfläche „Jetzt kaufen" werden Sie zur
+        Für den Kauf über die Schaltfläche „Jetzt kaufen“ werden Sie zur
         Zahlung an Stripe weitergeleitet (Stripe Payments Europe, Ltd.).
         Dabei verarbeitet Stripe die für die Zahlung und den Versand
         nötigen Daten (z. B. Name, Lieferadresse, Zahlungsdaten) in eigener
@@ -523,8 +523,8 @@ export default function DatenschutzPage() {
 
       <h3>Karten &amp; Entfernungsberechnung (OpenStreetMap)</h3>
       <p>
-        Auf der Seite „Musikalische Lesungen" kann eine Karte geladen
-        werden. Sie wird erst nach einem Klick auf „Karte laden" von
+        Auf der Seite „Musikalische Lesungen“ kann eine Karte geladen
+        werden. Sie wird erst nach einem Klick auf „Karte laden“ von
         OpenStreetMap abgerufen – vorher werden keine Kartendaten geladen.
         Für die optionale Entfernungsberechnung wird der eingegebene Ort
         über den Dienst Nominatim (OpenStreetMap) abgefragt. Dabei wird
