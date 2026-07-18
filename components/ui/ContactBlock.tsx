@@ -1,5 +1,6 @@
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 
 function PhoneIcon() {
   return (
@@ -38,13 +39,14 @@ function MailIcon() {
 export function ContactBlock({ className }: { className?: string }) {
   return (
     <div className={cn("space-y-4", className)}>
-      <a
-        href={`tel:${site.contact.telefonHref}`}
-        className="group flex items-center gap-3 text-ink transition-colors hover:text-gold"
-      >
+      <div className="group flex items-center gap-3 text-ink transition-colors hover:text-gold">
         <PhoneIcon />
-        <span className="text-lg">{site.contact.telefon}</span>
-      </a>
+        <PhoneNumber
+          number={site.contact.telefon}
+          href={`tel:${site.contact.telefonHref}`}
+          className="text-lg"
+        />
+      </div>
       <a
         href={`mailto:${site.contact.email}`}
         className="group flex items-center gap-3 break-all text-ink transition-colors hover:text-gold"

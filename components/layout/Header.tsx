@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/content/site";
+import { books } from "@/content/books";
 import { MobileNav } from "./MobileNav";
 
 function ChevronDown() {
@@ -23,9 +24,9 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link
-          href="/"
+          href={`/buecher/${books[0].slug}`}
           className="flex items-center"
-          aria-label="Vedana Verlag – zur Startseite"
+          aria-label="Vedana Verlag – zum Buch"
         >
           <Image
             src="/images/brand/vedana-logo-v1.webp"

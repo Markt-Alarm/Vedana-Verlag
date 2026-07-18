@@ -1,5 +1,5 @@
 import { LegalPageLayout } from "@/components/ui/LegalPageLayout";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -23,25 +23,15 @@ export default function ImpressumPage() {
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: {site.contact.telefon}
+        Telefon: <PhoneNumber number={site.contact.telefon} />
         <br />
-        Telefax: {site.contact.telefax}
+        Telefax: <PhoneNumber number={site.contact.telefax} />
         <br />
         E-Mail: {site.contact.email}
       </p>
 
       <h2>Vertretungsberechtigte</h2>
       <p>{site.address.inhaberin}</p>
-
-      <h2>Register &amp; Sitz</h2>
-      <p>
-        Registergericht:{" "}
-        <Placeholder>
-          [Name des Registergerichts, z. B. Amtsgericht Musterstadt]
-        </Placeholder>
-        <br />
-        Registernummer: <Placeholder>[HRB-Nummer]</Placeholder>
-      </p>
 
       <h2>Umsatzsteuer</h2>
       <p>

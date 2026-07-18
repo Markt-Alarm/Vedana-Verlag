@@ -1,4 +1,5 @@
 import { LegalPageLayout } from "@/components/ui/LegalPageLayout";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -75,12 +76,85 @@ export default function DatenschutzPage() {
       </p>
 
       <h2>2. Hosting</h2>
-      <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-
-      <h3>Hosting.de</h3>
       <p>
-        Anbieter ist die hosting.de GmbH, Franzstr. 51, 52064 Aachen
-        (nachfolgend hosting.de).
+        Wir hosten die Inhalte unserer Website bei folgenden Anbietern:
+      </p>
+
+      <h3>Vercel</h3>
+      <p>
+        Anbieter ist die Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA
+        91789, USA (nachfolgend Vercel). Vercel ist der Dienstleister, über
+        den unsere Website technisch bereitgestellt (gehostet) wird.
+      </p>
+      <p>
+        Details entnehmen Sie der Datenschutzerklärung von Vercel:{" "}
+        <a
+          href="https://vercel.com/legal/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://vercel.com/legal/privacy-policy
+        </a>
+        .
+      </p>
+      <p>
+        Wir haben mit Vercel einen Vertrag über Auftragsverarbeitung (AVV)
+        geschlossen (siehe{" "}
+        <a
+          href="https://vercel.com/legal/dpa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://vercel.com/legal/dpa
+        </a>
+        ). Da Vercel Daten auch in den USA verarbeitet, wurden mit Vercel
+        die von der EU-Kommission bereitgestellten Standardvertragsklauseln
+        (Art. 46 Abs. 2 DSGVO) vereinbart, um ein angemessenes
+        Datenschutzniveau sicherzustellen.
+      </p>
+
+      <h3>Cloudflare</h3>
+      <p>
+        Zur Auslieferung unserer Website nutzen wir außerdem den Dienst
+        Cloudflare. Anbieter ist die Cloudflare, Inc., 101 Townsend St., San
+        Francisco, CA 94107, USA (nachfolgend Cloudflare). Cloudflare
+        stellt ein weltweit verteiltes Netzwerk (Content Delivery Network)
+        bereit, über das unsere Website ausgeliefert wird, und schützt
+        unsere Website u. a. vor Angriffen. Dabei verarbeitet Cloudflare
+        insbesondere Ihre IP-Adresse sowie technische Zugriffsdaten.
+      </p>
+      <p>
+        Details entnehmen Sie der Datenschutzerklärung von Cloudflare:{" "}
+        <a
+          href="https://www.cloudflare.com/de-de/privacypolicy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.cloudflare.com/de-de/privacypolicy/
+        </a>
+        .
+      </p>
+      <p>
+        Die Verwendung von Cloudflare erfolgt auf Grundlage von Art. 6 Abs. 1
+        lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer
+        möglichst zuverlässigen und schnellen Darstellung unserer Website.
+        Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die
+        Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a
+        DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung
+        von Cookies oder den Zugriff auf Informationen im Endgerät des
+        Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst.
+        Die Einwilligung ist jederzeit widerrufbar. Für die Übermittlung von
+        Daten in die USA stützt sich Cloudflare auf das EU-US Data Privacy
+        Framework sowie ergänzend auf die Standardvertragsklauseln der
+        EU-Kommission (Art. 46 Abs. 2 DSGVO).
+      </p>
+
+      <h3>hosting.de (Domain-Registrierung)</h3>
+      <p>
+        Unsere Domain wurde über die hosting.de GmbH, Franzstr. 51, 52064
+        Aachen (nachfolgend hosting.de), registriert. hosting.de tritt in
+        diesem Zusammenhang ausschließlich als Domain-Registrar auf und ist
+        nicht am Hosting der Website beteiligt.
       </p>
       <p>
         Details entnehmen Sie der Datenschutzerklärung von hosting.de:{" "}
@@ -93,26 +167,15 @@ export default function DatenschutzPage() {
         </a>
         .
       </p>
-      <p>
-        Die Verwendung von hosting.de erfolgt auf Grundlage von Art. 6 Abs. 1
-        lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst
-        zuverlässigen Darstellung unserer Website. Sofern eine entsprechende
-        Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich
-        auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG,
-        soweit die Einwilligung die Speicherung von Cookies oder den Zugriff
-        auf Informationen im Endgerät des Nutzers (z. B.
-        Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung
-        ist jederzeit widerrufbar.
-      </p>
 
       <h3>Auftragsverarbeitung</h3>
       <p>
-        Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung
-        des oben genannten Dienstes geschlossen. Hierbei handelt es sich um
-        einen datenschutzrechtlich vorgeschriebenen Vertrag, der
-        gewährleistet, dass dieser die personenbezogenen Daten unserer
+        Wir haben mit den oben genannten Diensten, soweit erforderlich,
+        Verträge über Auftragsverarbeitung (AVV) geschlossen. Hierbei
+        handelt es sich um datenschutzrechtlich vorgeschriebene Verträge,
+        die gewährleisten, dass diese die personenbezogenen Daten unserer
         Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
-        DSGVO verarbeitet.
+        DSGVO verarbeiten.
       </p>
 
       <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
@@ -152,7 +215,7 @@ export default function DatenschutzPage() {
         {site.address.plz} {site.address.ort}
       </p>
       <p>
-        Telefon: {site.contact.telefon}
+        Telefon: <PhoneNumber number={site.contact.telefon} />
         <br />
         E-Mail: {site.contact.email}
       </p>

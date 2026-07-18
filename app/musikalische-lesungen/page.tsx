@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactBlock } from "@/components/ui/ContactBlock";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { LesungenForm } from "@/components/lesungen/LesungenForm";
 import { LesungenMap } from "@/components/lesungen/LesungenMap";
 import { site } from "@/content/site";
@@ -35,12 +36,11 @@ export default function LesungenPage() {
           <p className="mt-3 text-ink/70">
             Gerne können Sie eine musikalische Lesung für Ihre Veranstaltung
             buchen. Wir freuen uns auf Ihren Anruf unter{" "}
-            <a
+            <PhoneNumber
+              number={site.contact.telefon}
               href={`tel:${site.contact.telefonHref}`}
               className="font-medium text-ink underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
-            >
-              {site.contact.telefon}
-            </a>
+            />
             .
           </p>
           <div className="mt-8">

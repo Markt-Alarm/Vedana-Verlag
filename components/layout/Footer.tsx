@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/content/site";
+import { books } from "@/content/books";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,13 +12,19 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <Image
-              src="/images/brand/vedana-logo-v1.webp"
-              alt="Vedana Verlag"
-              width={402}
-              height={253}
-              className="h-20 w-auto"
-            />
+            <Link
+              href={`/buecher/${books[0].slug}`}
+              className="inline-block"
+              aria-label="Zum Buch – Der Buddha war wie Du"
+            >
+              <Image
+                src="/images/brand/vedana-logo-v1.webp"
+                alt="Vedana Verlag"
+                width={402}
+                height={253}
+                className="h-20 w-auto"
+              />
+            </Link>
             <p className="mt-4 max-w-xs font-display text-lg italic text-ink/70">
               Bücher mit Herz
             </p>
@@ -69,7 +77,7 @@ export function Footer() {
           <p>
             © {year} {site.name}
           </p>
-          <p>{site.contact.telefon}</p>
+          <PhoneNumber number={site.contact.telefon} />
         </div>
       </div>
     </footer>

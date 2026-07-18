@@ -51,7 +51,7 @@ export const people: Person[] = [
   {
     name: "Elisa Anton",
     rolle: "Covergestaltung & Illustration",
-    bild: "/images/team/elisa-anton-v1.webp",
+    bild: "/images/team/elisa-anton-v2.webp",
     bildAlt: "Porträt von Elisa Anton, Covergestaltung und Illustration.",
   },
   {
