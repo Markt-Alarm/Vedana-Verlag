@@ -32,9 +32,9 @@ export const people: Person[] = [
   },
   {
     name: "Arthur Ansari",
-    rolle: "Illustration & künstlerische Leitung",
+    rolle: "Illustration",
     bild: "/images/team/arthur-ansari-v1.webp",
-    bildAlt: "Porträt von Arthur Ansari, Illustration und künstlerische Leitung.",
+    bildAlt: "Porträt von Arthur Ansari, Illustration.",
   },
   {
     name: "Aaron Ansari",
