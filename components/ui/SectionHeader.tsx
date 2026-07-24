@@ -7,12 +7,14 @@ export function SectionHeader({
   intro,
   align = "left",
   className,
+  eyebrowClassName,
 }: {
   eyebrow?: string;
   title: ReactNode;
   intro?: ReactNode;
   align?: "left" | "center";
   className?: string;
+  eyebrowClassName?: string;
 }) {
   return (
     <div
@@ -23,7 +25,12 @@ export function SectionHeader({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 font-display text-sm uppercase tracking-[0.2em] text-gold">
+        <p
+          className={cn(
+            "mb-3 font-display text-sm uppercase tracking-[0.2em] text-gold",
+            eyebrowClassName,
+          )}
+        >
           {eyebrow}
         </p>
       )}

@@ -108,6 +108,10 @@ export default function VerlagPage() {
       {mahinda && (
         <Container className="pb-16 md:pb-24">
           <FeaturedPerson person={mahinda} />
+          <p className="mx-auto mt-8 max-w-prose text-center text-lg leading-relaxed text-ink/80">
+            Bücher mit Herz brauchen mehr als einen Verlag. Sie brauchen
+            Menschen, die an sie glauben.
+          </p>
         </Container>
       )}
 
@@ -118,8 +122,9 @@ export default function VerlagPage() {
             Das Team hinter dem Vedana Verlag
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-ink/70">
-            Der Vedana Verlag ist Familiensache – wir gestalten unsere Bücher
-            gemeinsam, jede und jeder mit den eigenen Stärken.
+            Wir sind ein kleiner Familienverlag. Hier vereinen wir unsere
+            unterschiedlichen Stärken, um Bücher mit Sorgfalt und Liebe
+            entstehen zu lassen.
           </p>
           <div className="mt-6 flex justify-center">
             <CTA href="/verlag/team">Zum Team</CTA>

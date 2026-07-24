@@ -48,8 +48,8 @@ export default function HomePage() {
               {site.claim}
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/85 md:max-w-xl">
-              Bücher, die nicht nur gelesen, sondern empfunden werden – liebevoll
-              illustriert und mit Sorgfalt gemacht.
+              Für Bücher, die nicht nur gelesen, sondern empfunden werden – von
+              Hand illustriert und mit Sorgfalt gemacht
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <CTA href={`/buecher/${book.slug}`}>Zum Buch</CTA>
@@ -100,6 +100,7 @@ export default function HomePage() {
           <Reveal>
             <SectionHeader
               align="center"
+              eyebrowClassName="text-left"
               eyebrow="Was uns wichtig ist"
               title="Gefühl, Sinnlichkeit, Qualität"
               intro="Wir glauben an die Kraft liebevoll gewachsener Bücher."
@@ -125,8 +126,8 @@ export default function HomePage() {
             <div className="order-2 md:order-1">
               <SectionHeader
                 eyebrow="Der Verlag"
-                title="Ein Buch zu schreiben fühlt sich an wie Kinderkriegen."
-                intro="Von der ersten Idee bis zu den druckvollen Presswehen – und warum wir daraus einen Verlag gemacht haben."
+                title="Vedana bedeutet Gefühl"
+                intro="Damit sich die Veröffentlichung eines Buches genauso liebevoll gestaltet, wie sein Entstehen, haben wir diesen Verlag gegründet."
               />
               <div className="mt-7">
                 <CTA href="/verlag" variant="secondary">

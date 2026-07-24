@@ -14,7 +14,7 @@ export const site = {
   // Für SEO/Metadaten. Beim Deploy auf die echte Domain setzen.
   url: "https://www.vedana-verlag.de",
   tagline: "Bücher für das Herz",
-  claim: "Lassen Sie sich berühren.",
+  claim: "Wenn Bücher mehr sind als geschriebene Worte",
   description:
     "Der Vedana Verlag macht Bücher, die nicht nur gelesen, sondern empfunden werden – liebevoll illustriert, sorgfältig gedruckt, mit Gefühl, Sinnlichkeit und Qualität.",
 

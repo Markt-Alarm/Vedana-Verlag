@@ -19,6 +19,6 @@ export const werte: Wert[] = [
   },
   {
     titel: "Qualität",
-    text: "Damit ein Buch mit allen Sinnen erfahrbar wird, setzen wir auf handgefertigte Illustrationen. Unsere Texte sind über Jahre gewachsen und garantiert ohne KI-generierte Inhalte. Unser Lektorat sorgt für einen fehlerfreien Lesegenuss. Sorgfalt, die man spürt.",
+    text: "Damit ein Buch mit allen Sinnen erfahrbar wird, setzen wir nicht nur auf handgefertigte Illustrationen, sondern auch auf Qualität beim Druck. Unsere Texte sind über Jahre gewachsen und garantiert ohne KI-generierte Inhalte. Unser Lektorat sorgt für einen fehlerfreien Lesegenuss. Sorgfalt, die man spürt.",
   },
 ];
