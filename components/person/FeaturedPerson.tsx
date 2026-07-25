@@ -4,7 +4,7 @@ import { RichText } from "@/components/ui/RichText";
 
 export function FeaturedPerson({ person }: { person: Person }) {
   return (
-    <div className="grid items-center gap-8 md:grid-cols-[16rem_1fr] md:gap-12">
+    <div className="mx-auto max-w-md text-center">
       <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-lg shadow-book">
         <Image
           src={person.bild}
@@ -14,7 +14,7 @@ export function FeaturedPerson({ person }: { person: Person }) {
           className="object-cover object-[center_28%]"
         />
       </div>
-      <div>
+      <div className="mt-6">
         <p className="font-display text-sm uppercase tracking-[0.2em] text-gold">
           {person.rolle}
         </p>

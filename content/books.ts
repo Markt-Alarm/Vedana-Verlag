@@ -54,7 +54,7 @@ export const books: Book[] = [
     cover: "/images/buecher/der-buddha-war-wie-du-cover-v3.webp",
     coverAlt:
       "Buchcover „Der Buddha war wie Du“ – Aquarell mit Weltkugel, Vögeln und einer meditierenden Figur am Wasser.",
-    preis: null, // TODO PLATZHALTER: gebundener Ladenpreis in Euro, z. B. 24.9
+    preis: 19.95,
     isbn: undefined, // TODO PLATZHALTER
     erscheinungsjahr: undefined, // TODO PLATZHALTER
     seiten: undefined, // TODO PLATZHALTER

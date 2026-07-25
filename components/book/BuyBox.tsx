@@ -66,6 +66,11 @@ export function BuyBox({ book }: { book: Book }) {
               <CTA href={stripe.url} external variant="primary" className="w-full">
                 Jetzt kaufen
               </CTA>
+              <p className="mt-2 text-xs leading-relaxed text-ink/60">
+                Wenn Sie das Buch über unseren Shop bestellen, erhalten Sie
+                zum gleichen Preis eine hochwertige Ausgabe aus unserer
+                Druckerei – mit edler Klappenbroschur.
+              </p>
               {istPlatzhalterLink && (
                 <p className="mt-2 text-xs leading-relaxed text-ink/50">
                   Hinweis: aktuell Test-/Platzhalter-Link. Vor dem Go-live durch

@@ -108,10 +108,6 @@ export default function VerlagPage() {
       {mahinda && (
         <Container className="pb-16 md:pb-24">
           <FeaturedPerson person={mahinda} />
-          <p className="mx-auto mt-8 max-w-prose text-center text-lg leading-relaxed text-ink/80">
-            Bücher mit Herz brauchen mehr als einen Verlag. Sie brauchen
-            Menschen, die an sie glauben.
-          </p>
         </Container>
       )}
 

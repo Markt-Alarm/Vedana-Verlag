@@ -60,14 +60,8 @@ export const site = {
   // Die Route /buecher bleibt bestehen und wird später wieder eingeblendet.
   nav: [
     { label: "Start", href: "/" },
-    {
-      label: "Verlag",
-      href: "/verlag",
-      children: [
-        { label: "Über den Verlag", href: "/verlag" },
-        { label: "Team", href: "/verlag/team" },
-      ],
-    },
+    { label: "Verlag", href: "/verlag" },
+    { label: "Über uns", href: "/verlag/team" },
     { label: "Musikalische Lesungen", href: "/musikalische-lesungen" },
     { label: "Shop", href: "/buecher/der-buddha-war-wie-du" },
     { label: "Kontakt", href: "/kontakt" },

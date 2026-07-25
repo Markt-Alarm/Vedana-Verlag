@@ -98,13 +98,17 @@ export default function HomePage() {
       <section className="bg-paper-deep">
         <Container className="py-20 md:py-28">
           <Reveal>
-            <SectionHeader
-              align="center"
-              eyebrowClassName="text-left"
-              eyebrow="Was uns wichtig ist"
-              title="Gefühl, Sinnlichkeit, Qualität"
-              intro="Wir glauben an die Kraft liebevoll gewachsener Bücher."
-            />
+            <p className="font-display text-sm uppercase tracking-[0.2em] text-gold">
+              Was uns wichtig ist
+            </p>
+            <div className="mx-auto mt-3 max-w-2xl text-center">
+              <h2 className="text-3xl leading-tight md:text-4xl">
+                Gefühl, Sinnlichkeit, Qualität
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-ink/75">
+                Wir glauben an die Kraft liebevoll gewachsener Bücher.
+              </p>
+            </div>
           </Reveal>
           <div className="mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-3">
             {werte.map((w, i) => (

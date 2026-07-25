@@ -18,7 +18,8 @@ export const people: Person[] = [
   {
     name: "Mahinda Ansari",
     rolle: "Autorin & Heilpraktikerin",
-    beschreibung: "„Ein Buch zu schreiben fühlt sich an wie Kinderkriegen.“",
+    beschreibung:
+      "Bücher mit Herz brauchen mehr als einen Verlag. Sie brauchen Menschen, die an sie glauben.",
     bild: "/images/team/mahinda-ansari-v1.webp",
     bildAlt:
       "Porträt von Mahinda Ansari, Autorin und Heilpraktikerin des Vedana Verlags.",
