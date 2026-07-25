@@ -18,15 +18,20 @@ function splitPlaceholders(text: string) {
 export function RichText({
   text,
   className,
+  center = false,
 }: {
   text: string;
   className?: string;
+  /** Zentriert die Absätze (überschreibt den globalen Blocksatz gezielt am <p>). */
+  center?: boolean;
 }) {
   const paragraphs = text.split(/\n\n+/);
   return (
     <div className={cn("prose-vedana", className)}>
       {paragraphs.map((para, i) => (
-        <p key={i}>{splitPlaceholders(para)}</p>
+        <p key={i} className={cn(center && "text-center")}>
+          {splitPlaceholders(para)}
+        </p>
       ))}
     </div>
   );

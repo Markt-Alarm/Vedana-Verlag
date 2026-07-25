@@ -20,7 +20,7 @@ export function FeaturedPerson({ person }: { person: Person }) {
         </p>
         <h2 className="mt-2 text-3xl">{person.name}</h2>
         {person.beschreibung && (
-          <RichText text={person.beschreibung} className="mt-4" />
+          <RichText text={person.beschreibung} className="mt-4" center />
         )}
       </div>
     </div>

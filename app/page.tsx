@@ -105,7 +105,7 @@ export default function HomePage() {
               <h2 className="text-3xl leading-tight md:text-4xl">
                 Gefühl, Sinnlichkeit, Qualität
               </h2>
-              <p className="mt-4 text-lg leading-relaxed text-ink/75">
+              <p className="mt-4 text-center text-lg leading-relaxed text-ink/75">
                 Wir glauben an die Kraft liebevoll gewachsener Bücher.
               </p>
             </div>
