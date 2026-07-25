@@ -53,10 +53,9 @@ export function BuyBox({ book }: { book: Book }) {
       </div>
 
       <p className="mt-3 text-sm leading-relaxed text-ink/60">
-        {site.shop.steuerhinweis}
-        <br />
-        {site.shop.versandHinweis}.
-        {book.lieferzeit ? ` Lieferzeit: ${book.lieferzeit}.` : ""}
+        Beim Kauf des Buches über unseren Shop, erhalten Sie zum selben
+        Preis eine hochwertigere Variante aus unserer Druckerei – mit
+        edler Klappenbroschur.
       </p>
 
       {kaufbar ? (
@@ -67,9 +66,10 @@ export function BuyBox({ book }: { book: Book }) {
                 Jetzt kaufen
               </CTA>
               <p className="mt-2 text-xs leading-relaxed text-ink/60">
-                Wenn Sie das Buch über unseren Shop bestellen, erhalten Sie
-                zum gleichen Preis eine hochwertige Ausgabe aus unserer
-                Druckerei – mit edler Klappenbroschur.
+                {site.shop.steuerhinweis}
+                <br />
+                {site.shop.versandHinweis}.
+                {book.lieferzeit ? ` Lieferzeit: ${book.lieferzeit}.` : ""}
               </p>
               {istPlatzhalterLink && (
                 <p className="mt-2 text-xs leading-relaxed text-ink/50">
