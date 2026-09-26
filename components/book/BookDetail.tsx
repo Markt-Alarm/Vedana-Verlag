@@ -130,8 +130,9 @@ export function BookDetail({ book }: { book: Book }) {
               <MetaRow label="ISBN">
                 {book.isbn ?? <Placeholder>folgt</Placeholder>}
               </MetaRow>
-              <MetaRow label="Erschienen">
-                {book.erscheinungsjahr ?? <Placeholder>folgt</Placeholder>}
+              <MetaRow label="Erscheinungstermin">
+                {book.erscheinungsdatum ??
+                  book.erscheinungsjahr ?? <Placeholder>folgt</Placeholder>}
               </MetaRow>
             </dl>
           </div>

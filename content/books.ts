@@ -31,6 +31,7 @@ export interface Book {
   preis: number | null; // gebundener Ladenpreis in Euro; null = folgt
   isbn?: string;
   erscheinungsjahr?: number;
+  erscheinungsdatum?: string; // ausgeschrieben, z. B. „1. Oktober 2026“
   seiten?: number;
   format?: string;
   leseprobe?: string; // URL zur Leseprobe (z. B. PDF); leer = Platzhalter-Button
@@ -55,11 +56,12 @@ export const books: Book[] = [
     coverAlt:
       "Buchcover „Der Buddha war wie Du“ – Aquarell mit Weltkugel, Vögeln und einer meditierenden Figur am Wasser.",
     preis: 19.95,
-    isbn: undefined, // TODO PLATZHALTER
-    erscheinungsjahr: undefined, // TODO PLATZHALTER
-    seiten: undefined, // TODO PLATZHALTER
+    isbn: "978-3-00-088638-6",
+    erscheinungsjahr: 2026,
+    erscheinungsdatum: "1. Oktober 2026",
+    seiten: 144,
     format: undefined, // TODO PLATZHALTER: z. B. „Hardcover, durchgehend farbig illustriert“
-    leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v2.pdf",
+    leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v3.pdf",
     lieferzeit: "2–4 Werktage innerhalb Deutschlands",
     kaufoptionen: [
       // TODO PLATZHALTER: echten Stripe Payment Link eintragen.

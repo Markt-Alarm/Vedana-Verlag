@@ -28,13 +28,13 @@ export const people: Person[] = [
   {
     name: "Elisa Anton",
     rolle: "Covergestaltung & Illustration",
-    bild: "/images/team/elisa-anton-v2.webp",
+    bild: "/images/team/elisa-anton-v3.webp",
     bildAlt: "Porträt von Elisa Anton, Covergestaltung und Illustration.",
   },
   {
     name: "Arthur Ansari",
     rolle: "Illustration",
-    bild: "/images/team/arthur-ansari-v1.webp",
+    bild: "/images/team/arthur-ansari-v2.webp",
     bildAlt: "Porträt von Arthur Ansari, Illustration.",
   },
   {
@@ -51,9 +51,9 @@ export const people: Person[] = [
   },
   {
     name: "Dr. Peter Ansari",
-    rolle: "Texte und Layout",
-    bild: "/images/team/peter-ansari-v1.webp",
-    bildAlt: "Porträt von Dr. Peter Ansari, Texte und Layout.",
+    rolle: "Layout",
+    bild: "/images/team/peter-ansari-v2.webp",
+    bildAlt: "Porträt von Dr. Peter Ansari, Layout.",
   },
   {
     name: "Jan Ansari",
