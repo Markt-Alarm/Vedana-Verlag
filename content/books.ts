@@ -55,18 +55,18 @@ export const books: Book[] = [
     cover: "/images/buecher/der-buddha-war-wie-du-cover-v3.webp",
     coverAlt:
       "Buchcover „Der Buddha war wie Du“ – Aquarell mit Weltkugel, Vögeln und einer meditierenden Figur am Wasser.",
-    preis: 19.95,
+    preis: 14.95,
     isbn: "978-3-00-088638-6",
     erscheinungsjahr: 2026,
     erscheinungsdatum: "1. Oktober 2026",
     seiten: 144,
-    format: undefined, // TODO PLATZHALTER: z. B. „Hardcover, durchgehend farbig illustriert“
+    format: "Taschenbuch, 15,2 × 22,9 cm",
     leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v3.pdf",
     lieferzeit: "2–4 Werktage innerhalb Deutschlands",
     kaufoptionen: [
-      // TODO PLATZHALTER: echten Stripe Payment Link eintragen.
-      // Erst zum Go-live scharfschalten – bis dahin Test-/Platzhalter-Link.
-      { typ: "stripe-payment-link", url: "https://buy.stripe.com/test_PLATZHALTER" },
+      // Live-Zahlungslink aus dem Stripe-Konto „Vedana Verlag“ (14,95 €, Versand nur DE).
+      // Preisänderung = neuen Zahlungslink in Stripe anlegen und hier ersetzen.
+      { typ: "stripe-payment-link", url: "https://buy.stripe.com/bJe7sE3zjcey6bya1N9R600" },
       { typ: "rechnung" },
     ],
     status: "erschienen",

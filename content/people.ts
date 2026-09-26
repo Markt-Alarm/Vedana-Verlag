@@ -26,6 +26,12 @@ export const people: Person[] = [
     featured: true,
   },
   {
+    name: "Dr. Peter Ansari",
+    rolle: "Layout",
+    bild: "/images/team/peter-ansari-v2.webp",
+    bildAlt: "Porträt von Dr. Peter Ansari, Layout.",
+  },
+  {
     name: "Elisa Anton",
     rolle: "Covergestaltung & Illustration",
     bild: "/images/team/elisa-anton-v3.webp",
@@ -48,12 +54,6 @@ export const people: Person[] = [
     rolle: "Stoffentwicklung",
     bild: "/images/team/amber-ansari-v2.webp",
     bildAlt: "Porträt von Amber Ansari, Stoffentwicklung.",
-  },
-  {
-    name: "Dr. Peter Ansari",
-    rolle: "Layout",
-    bild: "/images/team/peter-ansari-v2.webp",
-    bildAlt: "Porträt von Dr. Peter Ansari, Layout.",
   },
   {
     name: "Jan Ansari",
