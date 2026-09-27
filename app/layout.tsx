@@ -5,7 +5,10 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ConsentAndAnalytics } from "@/components/analytics/ConsentAndAnalytics";
+import { BookAnnouncement } from "@/components/book/BookAnnouncement";
+import { books } from "@/content/books";
 import { site } from "@/content/site";
+import { formatEuro } from "@/lib/format";
 
 // Selbst gehostet über next/font → kein Google-Fonts-Request (DSGVO-sauber).
 const display = Fraunces({
@@ -44,6 +47,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const launchBook = books[0];
+  const paymentLink = launchBook.kaufoptionen.find(
+    (option) => option.typ === "stripe-payment-link",
+  );
+
   return (
     <html lang="de" className={`${display.variable} ${body.variable}`}>
       <body className="flex min-h-screen flex-col">
@@ -62,7 +70,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </main>
         <Footer />
         <ConsentAndAnalytics />
+        <BookAnnouncement
+          purchaseUrl={paymentLink?.url}
+          priceLabel={launchBook.preis != null ? formatEuro(launchBook.preis) : undefined}
+        />
       </body>
     </html>
   );
 }
+
