@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 type CampaignPhase = "vorverkauf" | "release";
 
 const campaignStart = "2026-09-26";
-const releaseDate = "2026-10-01";
+const releaseDate = "2026-10-15";
 const campaignEnd = "2026-10-15";
 
 export function BookAnnouncement({
@@ -33,7 +33,7 @@ export function BookAnnouncement({
 
     const currentPhase: CampaignPhase =
       dateInBerlin < releaseDate ? "vorverkauf" : "release";
-    const storageKey = `vedana-buchstart-2026-${currentPhase}-geschlossen`;
+    const storageKey = `vedana-buchstart-2026-10-15-${currentPhase}-geschlossen`;
 
     try {
       if (localStorage.getItem(storageKey)) return;
@@ -52,7 +52,10 @@ export function BookAnnouncement({
   function rememberDismissal() {
     if (!phase) return;
     try {
-      localStorage.setItem(`vedana-buchstart-2026-${phase}-geschlossen`, "1");
+      localStorage.setItem(
+        `vedana-buchstart-2026-10-15-${phase}-geschlossen`,
+        "1",
+      );
     } catch {
       // Kein Speicherzugriff: der Dialog funktioniert dennoch.
     }
@@ -84,7 +87,7 @@ export function BookAnnouncement({
         <div className="flex h-44 items-center justify-center bg-paper-deep p-4 sm:h-auto sm:min-h-[24rem] sm:p-8">
           <div className="relative h-full w-28 shadow-book sm:h-80 sm:w-52">
             <Image
-              src="/images/buecher/der-buddha-war-wie-du-cover-v3.webp"
+              src="/images/buecher/der-buddha-war-wie-du-cover-k3.webp"
               alt="Cover des Buches Der Buddha war wie Du"
               fill
               sizes="(min-width: 640px) 13rem, 7rem"
@@ -94,15 +97,15 @@ export function BookAnnouncement({
         </div>
         <div className="flex flex-col justify-center px-7 pb-9 pt-8 sm:px-10 sm:py-12">
           <p className="font-display text-xs uppercase tracking-[0.24em] text-gold">
-            Buchstart · nur bis 15. Oktober
+            Neuerscheinung · 15. Oktober 2026
           </p>
           <h2 id="book-announcement-title" className="mt-4 text-3xl leading-tight sm:text-4xl">
-            {isRelease ? "Jetzt neu erschienen." : "Bald ist es so weit."}
+            {isRelease ? "Jetzt ist es erschienen." : "Das Buch erscheint."}
           </h2>
           <p className="mt-5 leading-relaxed text-ink/75">
             {isRelease
               ? "„Der Buddha war wie Du“ von Mahinda Ansari ist da – eine sinnliche Reise in die buddhistische Welt, erzählt in berührenden Geschichten."
-              : "„Der Buddha war wie Du“ von Mahinda Ansari erscheint am 1. Oktober 2026. Entdecken Sie schon jetzt das Buch und seine Leseprobe."}
+              : "„Der Buddha war wie Du“ von Mahinda Ansari erscheint am 15. Oktober 2026. Entdecken Sie schon jetzt das Buch und seine Leseprobe."}
           </p>
           {priceLabel && (
             <p className="mt-4 font-display text-lg text-ink">

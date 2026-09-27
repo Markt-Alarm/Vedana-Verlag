@@ -31,7 +31,7 @@ export interface Book {
   preis: number | null; // gebundener Ladenpreis in Euro; null = folgt
   isbn?: string;
   erscheinungsjahr?: number;
-  erscheinungsdatum?: string; // ausgeschrieben, z. B. „1. Oktober 2026“
+  erscheinungsdatum?: string; // ausgeschrieben, z. B. „15. Oktober 2026“
   seiten?: number;
   format?: string;
   leseprobe?: string; // URL zur Leseprobe (z. B. PDF); leer = Platzhalter-Button
@@ -52,24 +52,24 @@ export const books: Book[] = [
       "Dieses Buch entführt Dich auf eine sinnliche Reise in die buddhistische Welt. In zwölf längeren und kürzeren Geschichten erfährst Du, welche Einsichten und Methoden uns der Buddha für unser Leben mitgegeben hat. Eingebettet sind die Geschichten in eine zauberhafte Rahmenhandlung. Ein Junge, seine Schwester und ihr Vater begleiten uns durch die zwölf Monate eines Jahres. Monat für Monat öffnen sich Türen zu den großen Fragen des Lebens: Wie finden wir Gelassenheit? Warum leiden wir? Was bedeutet Karma? Und wie können wir zu Ruhe kommen? In poetischen Geschichten, verständlichen Erläuterungen und praktischen Übungen werden die Lehren des Buddha lebendig und unmittelbar erfahrbar.\n\nIn einer lauten Welt voller Ablenkungen lädt dieses herzerwärmende Buch zum Innehalten ein. Mit inspirierenden Texten und berührenden Illustrationen schenkt es Momente der Ruhe und Einsicht.\n\nFür alle, die sich einen lebendigen Zugang zur Lehre des Buddha wünschen.",
     zielgruppe:
       "Das Buch richtet sich an Leserinnen und Leser, die sich für Achtsamkeit, Spiritualität und persönliche Entwicklung interessieren. Es ist geeignet für Menschen, die bereits mit der buddhistischen Lehre in Berührung gekommen sind und auch für Menschen ohne Vorkenntnisse.",
-    cover: "/images/buecher/der-buddha-war-wie-du-cover-v3.webp",
+    cover: "/images/buecher/der-buddha-war-wie-du-cover-k3.webp",
     coverAlt:
       "Buchcover „Der Buddha war wie Du“ – Aquarell mit Weltkugel, Vögeln und einer meditierenden Figur am Wasser.",
-    preis: 14.95,
+    preis: 15.95,
     isbn: "978-3-00-088638-6",
     erscheinungsjahr: 2026,
-    erscheinungsdatum: "1. Oktober 2026",
+    erscheinungsdatum: "15. Oktober 2026",
     seiten: 144,
     format: "Taschenbuch, 15,2 × 22,9 cm",
     leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v3.pdf",
-    lieferzeit: "2–4 Werktage innerhalb Deutschlands",
+    lieferzeit: "Versand zum Erscheinungstermin am 15. Oktober 2026",
     kaufoptionen: [
-      // Live-Zahlungslink aus dem Stripe-Konto „Vedana Verlag“ (14,95 €, Versand nur DE).
+      // Live-Zahlungslink aus dem Stripe-Konto „Vedana Verlag“ (15,95 €, Versand nur DE).
       // Preisänderung = neuen Zahlungslink in Stripe anlegen und hier ersetzen.
       { typ: "stripe-payment-link", url: "https://buy.stripe.com/bJe7sE3zjcey6bya1N9R600" },
       { typ: "rechnung" },
     ],
-    status: "erschienen",
+    status: "bald-verfuegbar",
   },
 ];
 

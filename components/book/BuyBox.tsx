@@ -36,7 +36,8 @@ export function BuyBox({ book }: { book: Book }) {
     (k): k is Extract<Kaufoption, { typ: "extern" }> => k.typ === "extern",
   );
   const istPlatzhalterLink = stripe ? /PLATZHALTER|test_/i.test(stripe.url) : false;
-  const kaufbar = book.status === "erschienen";
+  const istVorbestellung = book.status === "bald-verfuegbar";
+  const kaufbar = book.status === "erschienen" || istVorbestellung;
 
   return (
     <div className="rounded-xl border border-ink/10 bg-paper p-6 shadow-soft">
@@ -64,7 +65,7 @@ export function BuyBox({ book }: { book: Book }) {
           {stripe && (
             <div className="text-center">
               <CTA href={stripe.url} external variant="primary" className="w-full">
-                Jetzt kaufen
+                {istVorbestellung ? "Jetzt vorbestellen" : "Jetzt kaufen"}
               </CTA>
               <p className="mt-2 text-center text-xs text-ink/50">
                 Sichere Zahlung über Stripe
@@ -84,7 +85,9 @@ export function BuyBox({ book }: { book: Book }) {
               variant="secondary"
               className="w-full"
             >
-              Auf Rechnung bestellen
+              {istVorbestellung
+                ? "Auf Rechnung vorbestellen"
+                : "Auf Rechnung bestellen"}
             </CTA>
           )}
 
