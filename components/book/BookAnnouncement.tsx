@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { BUDDHA_BOOK_RELEASE_AT } from "@/lib/release";
 
-type CampaignPhase = "vorverkauf" | "release";
-
-const campaignStart = "2026-09-26";
-const releaseDate = "2026-10-15";
-const campaignEnd = "2026-10-15";
+const campaignStart = Date.parse("2026-09-26T00:00:00+02:00");
+const releaseTime = Date.parse(BUDDHA_BOOK_RELEASE_AT);
+const storageKey = "vedana-buchstart-2026-10-15-vorverkauf-geschlossen";
 
 export function BookAnnouncement({
   purchaseUrl,
@@ -18,22 +17,11 @@ export function BookAnnouncement({
   priceLabel?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const [phase, setPhase] = useState<CampaignPhase | null>(null);
 
   useEffect(() => {
-    const dateInBerlin = new Intl.DateTimeFormat("sv-SE", {
-      timeZone: "Europe/Berlin",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }).format(new Date());
-
-    // Die Release-Aktion läuft einschließlich 15. Oktober (Zeitzone Berlin).
-    if (dateInBerlin < campaignStart || dateInBerlin > campaignEnd) return;
-
-    const currentPhase: CampaignPhase =
-      dateInBerlin < releaseDate ? "vorverkauf" : "release";
-    const storageKey = `vedana-buchstart-2026-10-15-${currentPhase}-geschlossen`;
+    const now = Date.now();
+    // Ab dem 15. Oktober, 00:00 Uhr Berliner Zeit erscheint das Popup nicht mehr.
+    if (now < campaignStart || now >= releaseTime) return;
 
     try {
       if (localStorage.getItem(storageKey)) return;
@@ -42,31 +30,23 @@ export function BookAnnouncement({
     }
 
     const dialog = dialogRef.current;
-    setPhase(currentPhase);
     dialog?.showModal();
+    const timeoutId = setTimeout(() => dialog?.close(), releaseTime - now);
     return () => {
+      clearTimeout(timeoutId);
       if (dialog?.open) dialog.close();
     };
   }, []);
 
   function rememberDismissal() {
-    if (!phase) return;
     try {
-      localStorage.setItem(
-        `vedana-buchstart-2026-10-15-${phase}-geschlossen`,
-        "1",
-      );
+      localStorage.setItem(storageKey, "1");
     } catch {
       // Kein Speicherzugriff: der Dialog funktioniert dennoch.
     }
   }
 
-  const isRelease = phase === "release";
-  const actionLabel = purchaseUrl
-    ? isRelease
-      ? "Jetzt bestellen"
-      : "Jetzt vorbestellen"
-    : "Buch ansehen";
+  const actionLabel = purchaseUrl ? "Jetzt vorbestellen" : "Buch ansehen";
 
   return (
     <dialog
@@ -100,12 +80,11 @@ export function BookAnnouncement({
             Neuerscheinung · 15. Oktober 2026
           </p>
           <h2 id="book-announcement-title" className="mt-4 text-3xl leading-tight sm:text-4xl">
-            {isRelease ? "Jetzt ist es erschienen." : "Das Buch erscheint."}
+            Das Buch erscheint.
           </h2>
           <p className="mt-5 leading-relaxed text-ink/75">
-            {isRelease
-              ? "„Der Buddha war wie Du“ von Mahinda Ansari ist da – eine sinnliche Reise in die buddhistische Welt, erzählt in berührenden Geschichten."
-              : "„Der Buddha war wie Du“ von Mahinda Ansari erscheint am 15. Oktober 2026. Entdecken Sie schon jetzt das Buch und seine Leseprobe."}
+            „Der Buddha war wie Du“ von Mahinda Ansari erscheint am 15. Oktober
+            2026. Entdecken Sie schon jetzt das Buch und seine Leseprobe.
           </p>
           {priceLabel && (
             <p className="mt-4 font-display text-lg text-ink">

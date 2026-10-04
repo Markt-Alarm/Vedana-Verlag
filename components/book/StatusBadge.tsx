@@ -1,5 +1,8 @@
+"use client";
+
 import type { BookStatus } from "@/content/books";
 import { cn } from "@/lib/cn";
+import { useReleaseState } from "./useReleaseState";
 
 const map: Record<BookStatus, { label: string; className: string } | null> = {
   erschienen: null, // erschienene Bücher brauchen kein Badge
@@ -7,7 +10,20 @@ const map: Record<BookStatus, { label: string; className: string } | null> = {
   "in-arbeit": { label: "In Arbeit", className: "bg-bluegrey/25" },
 };
 
-export function StatusBadge({ status }: { status: BookStatus }) {
+export function StatusBadge({
+  status,
+  releaseAt,
+}: {
+  status: BookStatus;
+  releaseAt?: string;
+}) {
+  const releaseState = useReleaseState(releaseAt);
+  if (
+    status === "bald-verfuegbar" &&
+    (releaseState === "pending" || releaseState === "released")
+  ) {
+    return null;
+  }
   const s = map[status];
   if (!s) return null;
   return (

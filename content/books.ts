@@ -1,3 +1,5 @@
+import { BUDDHA_BOOK_RELEASE_AT } from "@/lib/release";
+
 /**
  * Bücher-Katalog. In V1 ein Buch, auf Wachstum ausgelegt.
  * Neues Buch = diesen Eintrag kopieren, Werte anpassen, Cover ablegen.
@@ -32,6 +34,7 @@ export interface Book {
   isbn?: string;
   erscheinungsjahr?: number;
   erscheinungsdatum?: string; // ausgeschrieben, z. B. „15. Oktober 2026“
+  erscheinungszeitpunkt?: string; // ISO-Zeitpunkt für automatische Umschaltungen
   seiten?: number;
   format?: string;
   leseprobe?: string; // URL zur Leseprobe (z. B. PDF); leer = Platzhalter-Button
@@ -59,6 +62,7 @@ export const books: Book[] = [
     isbn: "978-3-00-088638-6",
     erscheinungsjahr: 2026,
     erscheinungsdatum: "15. Oktober 2026",
+    erscheinungszeitpunkt: BUDDHA_BOOK_RELEASE_AT,
     seiten: 144,
     format: "Taschenbuch, 15,2 × 22,9 cm",
     leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v3.pdf",

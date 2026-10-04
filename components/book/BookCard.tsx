@@ -18,7 +18,10 @@ export function BookCard({ book }: { book: Book }) {
         </div>
       </div>
       <div className="mt-4">
-        <StatusBadge status={book.status} />
+        <StatusBadge
+          status={book.status}
+          releaseAt={book.erscheinungszeitpunkt}
+        />
         <h3 className="mt-2 font-display text-xl text-ink transition-colors group-hover:text-gold">
           {book.titel}
         </h3>

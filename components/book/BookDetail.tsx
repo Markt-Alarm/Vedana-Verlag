@@ -7,6 +7,7 @@ import { BuyBox } from "./BuyBox";
 import { Container } from "@/components/ui/Container";
 import { RichText } from "@/components/ui/RichText";
 import { Placeholder } from "@/components/ui/Placeholder";
+import { ReleaseDateRow } from "./ReleaseDateRow";
 
 function MetaRow({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -130,10 +131,7 @@ export function BookDetail({ book }: { book: Book }) {
               <MetaRow label="ISBN">
                 {book.isbn ?? <Placeholder>folgt</Placeholder>}
               </MetaRow>
-              <MetaRow label="Erscheinungstermin">
-                {book.erscheinungsdatum ??
-                  book.erscheinungsjahr ?? <Placeholder>folgt</Placeholder>}
-              </MetaRow>
+              <ReleaseDateRow book={book} />
             </dl>
           </div>
         </div>
