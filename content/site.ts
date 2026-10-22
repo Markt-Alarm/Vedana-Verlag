@@ -47,7 +47,7 @@ export const site = {
   analytics: {
     googleAnalyticsId: "", // TODO PLATZHALTER: "G-XXXXXXXXXX"
   },
-  googleSiteVerification: "", // TODO PLATZHALTER: Search-Console-Meta-Token
+  googleSiteVerification: "NbHcCoolY_6raXDRViJ880i97bosdqq_bIO8mQmZQds",
 
   // Sitz des Verlags – Startpunkt der Entfernungsberechnung (musikalische Lesungen).
   standort: {
