@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { CTA } from "@/components/ui/CTA";
+
+export const metadata: Metadata = {
+  title: "Seite nicht gefunden",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

@@ -17,6 +17,7 @@ export function pageMetadata(opts: {
     : `${site.name} – ${site.tagline}`;
   const description = opts.description ?? site.description;
   const url = opts.path ? new URL(opts.path, site.url).toString() : site.url;
+  const image = opts.ogImage ?? "/opengraph-image";
 
   return {
     title: opts.title,
@@ -30,7 +31,13 @@ export function pageMetadata(opts: {
       siteName: site.name,
       locale: "de_DE",
       type: "website",
-      ...(opts.ogImage ? { images: [{ url: opts.ogImage }] } : {}),
+      images: [{ url: image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+      images: [image],
     },
   };
 }

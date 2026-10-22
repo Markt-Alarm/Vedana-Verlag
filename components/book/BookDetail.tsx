@@ -19,29 +19,71 @@ function MetaRow({ label, children }: { label: string; children: ReactNode }) {
 }
 
 export function BookDetail({ book }: { book: Book }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    name: book.titel,
-    ...(book.untertitel ? { alternativeHeadline: book.untertitel } : {}),
-    author: { "@type": "Person", name: book.autor },
-    publisher: { "@type": "Organization", name: site.name },
-    inLanguage: "de",
-    ...(book.isbn ? { isbn: book.isbn } : {}),
-    ...(book.erscheinungsjahr
-      ? { datePublished: String(book.erscheinungsjahr) }
-      : {}),
-    image: new URL(book.cover, site.url).toString(),
-    ...(book.preis != null
+  const canonical = new URL(`/buecher/${book.slug}`, site.url).toString();
+  const organizationId = `${site.url}/#organization`;
+  const publicationDate = book.erscheinungszeitpunkt?.slice(0, 10);
+  const offer =
+    book.preis != null
       ? {
-          offers: {
-            "@type": "Offer",
-            price: book.preis.toFixed(2),
-            priceCurrency: "EUR",
-            availability: "https://schema.org/InStock",
+          "@type": "Offer",
+          url: canonical,
+          price: book.preis.toFixed(2),
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+          seller: { "@id": organizationId },
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "DE",
+            },
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0.00",
+              currency: "EUR",
+            },
           },
         }
-      : {}),
+      : undefined;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": `${canonical}#book`,
+        url: canonical,
+        mainEntityOfPage: canonical,
+        name: book.titel,
+        ...(book.untertitel ? { alternativeHeadline: book.untertitel } : {}),
+        description: book.kurzbeschreibung,
+        author: { "@type": "Person", name: book.autor },
+        publisher: { "@id": organizationId },
+        inLanguage: "de-DE",
+        ...(book.isbn ? { isbn: book.isbn } : {}),
+        ...(publicationDate ? { datePublished: publicationDate } : {}),
+        image: new URL(book.cover, site.url).toString(),
+        ...(offer ? { offers: offer } : {}),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonical}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Start",
+            item: site.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: book.titel,
+            item: canonical,
+          },
+        ],
+      },
+    ],
   };
 
   return (

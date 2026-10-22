@@ -66,14 +66,13 @@ export const books: Book[] = [
     seiten: 144,
     format: "Taschenbuch, 15,2 × 22,9 cm",
     leseprobe: "/leseprobe/der-buddha-war-wie-du-leseprobe-v3.pdf",
-    lieferzeit: "Versand zum Erscheinungstermin am 15. Oktober 2026",
     kaufoptionen: [
       // Live-Zahlungslink aus dem Stripe-Konto „Vedana Verlag“ (15,95 €, Versand nur DE).
       // Preisänderung = neuen Zahlungslink in Stripe anlegen und hier ersetzen.
       { typ: "stripe-payment-link", url: "https://buy.stripe.com/bJe7sE3zjcey6bya1N9R600" },
       { typ: "rechnung" },
     ],
-    status: "bald-verfuegbar",
+    status: "erschienen",
   },
 ];
 

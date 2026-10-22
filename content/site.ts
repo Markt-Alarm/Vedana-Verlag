@@ -16,7 +16,7 @@ export const site = {
   tagline: "Bücher für das Herz",
   claim: "Wenn Bücher mehr sind als geschriebene Worte",
   description:
-    "Der Vedana Verlag macht Bücher, die nicht nur gelesen, sondern empfunden werden – liebevoll illustriert, sorgfältig gedruckt, mit Gefühl, Sinnlichkeit und Qualität.",
+    "Unabhängiger Familienverlag aus Scheeßel für liebevoll illustrierte Bücher, buddhistische Geschichten und musikalische Lesungen.",
 
   contact: {
     telefon: "04263 / 675 66 70",
