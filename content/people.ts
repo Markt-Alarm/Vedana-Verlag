@@ -27,9 +27,9 @@ export const people: Person[] = [
   },
   {
     name: "Dr. Peter Ansari",
-    rolle: "Layout",
+    rolle: "Buchsatz und Layout",
     bild: "/images/team/peter-ansari-v2.webp",
-    bildAlt: "Porträt von Dr. Peter Ansari, Layout.",
+    bildAlt: "Porträt von Dr. Peter Ansari, Buchsatz und Layout.",
   },
   {
     name: "Elisa Anton",
